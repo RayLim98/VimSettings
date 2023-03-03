@@ -1,6 +1,3 @@
-    /*
-        Vim settings
-    */
     "vim.easymotion": true,
     "vim.incsearch": true,
     "vim.useSystemClipboard": true,
@@ -8,45 +5,80 @@
     "vim.hlsearch": true,
     "vim.surround": true,
     "vim.autoindent": true,
-    "vim.insertModeKeyBindings": [
-        {
-        "before": ["j", "k"],
-        "after": ["<Esc>"]
-        }
-    ],
+    "vim.leader": "<space>",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
         "before": ["s"],
-        "after": ["<leader>", "<leader>", "s"]
+        "after": ["<leader>","<leader>", "s"]
         },
         {
         "before": ["<C-n>"],
         "commands": [":nohl"]
         },
-        {
-          "before": ["<leader>", "p"],
-          "commands": [":tabprev"]
-        },
-        {
-          "before": ["<C-l>"],
-          "after": ["<C-w>", "<C-l>"]
-        },
-        {
-          "before": ["<C-h>"],
-          "after": ["<C-w>", "<C-h>"]
-        },
-        {
-          "before": ["<C-j>"],
-          "after": ["<C-w>", "<C-j>"]
-        },
-        {
-          "before": ["<C-k>"],
-          "after": ["<C-w>", "<C-k>"]
-        },
-        
-    ],
-    "vim.leader": "<space>",
-    "vim.handleKeys": {
-        "<C-a>": false,
-        "<C-f>": false
+    {
+      "before": ["Z", "Z"],
+      "commands": [":wq"]
     },
+    {
+      "before": ["Z", "Q"],
+      "commands": [":q!"]
+    },
+    {
+      "before": ["C-w"],
+      "commands": [":tabclose"]
+    },
+    {
+      "before": ["C-Space"],
+      "commands": [":tabnext"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "commands": [":tabprev"]
+    },
+    {
+      "before": ["<C-l>"],
+      "after": ["<C-w>", "<C-l>"]
+    },
+    {
+      "before": ["<C-h>"],
+      "after": ["<C-w>", "<C-h>"]
+    },
+    {
+      "before": ["<C-j>"],
+      "after": ["<C-w>", "<C-j>"]
+    },
+    {
+      "before": ["<C-k>"],
+      "after": ["<C-w>", "<C-k>"]
+    },
+    {
+      "before": ["<leader>", "k"],
+      "commands": ["workbench.action.moveEditorToAboveGroup"]
+    },
+    {
+      "before": ["<leader>", "j"],
+      "commands": ["workbench.action.moveEditorToBelowGroup"]
+    },
+    {
+      "before": ["<leader>", "l"],
+      "commands": ["workbench.action.moveEditorToNextGroup"]
+    },
+    {
+      "before": ["<leader>", "h"],
+      "commands": ["workbench.action.moveEditorToPreviousGroup"]
+    },
+    {
+      "before": ["C-n"],
+      "commands": ["explorer.newFile"]
+    },
+    {
+      "before": ["C-m"],
+      "commands": ["explorer.newFolder"]
+    },
+  ] ,
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["j", "k"],
+      "after": ["<ESC>"]
+    }
+  ],
